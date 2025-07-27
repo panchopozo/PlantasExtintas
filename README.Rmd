@@ -11,4 +11,20 @@ knitr::opts_chunk$set(echo = TRUE)
 En este documento trabajaremos la identidad de plantas que se encuentrán 
 extintas en silvestría o totalmente extintas según la [*IUCN*](https://www.iucnredlist.org/es)
 
-## Subtítulo
+## Trabajando con los datos 
+
+Vamos a partir por cargar los paquetes necesarios para trabajar
+
+```{r}
+library(tidyverse)
+```
+
+Ahora voy a leer los datos con los que voy a trabajar: 
+
+```{r}
+library(readr)
+
+plants <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv")
+```
+
+
