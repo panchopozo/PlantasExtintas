@@ -27,4 +27,14 @@ library(readr)
 plants <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv")
 ```
 
+## Filtrando los datos para resolver el ejemplo 1
+
+El codigo que voy a hacer ahora es para resolver el problema en el siguiente slide, para poner dentro de la base de datos todos los datos de Chile y solo usar la columnas para pais("country"), especies ("binomial_name") y la categoría del IUCN (red_list_category) 
+
+```{r}
+Chile <- plants %>% 
+  dplyr::filter(country == "Chile") %>% 
+  dplyr::select(binomial_name, country, red_list_category)
+Chile
+```
 
